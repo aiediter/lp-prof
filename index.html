@@ -4,196 +4,249 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ポートフォリオ | AIで“面倒”を自動化する学生エンジニア</title>
+  <title>AI ラクスル | Engineering Portfolio</title>
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <!-- 5-1. Hero -->
-  <header class="section hero">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <h1 class="hero-title">AIで“面倒”を自動化する学生エンジニア</h1>
-        <p class="hero-desc">
-          生成AI × 実装（Python/Excel）で、作業を仕組みに変えます。
-        </p>
-        <div class="hero-badges">
-          <span class="badge">業務自動化/DX</span>
-          <span class="badge">AI活用（文章/分析/画像）</span>
-          <span class="badge">基本いつでも対応可能</span>
+  <!-- Command Palette Dialog -->
+  <dialog id="commandPalette" class="c-palette">
+    <div class="c-palette__content">
+      <header class="c-palette__header">
+        <input type="text" placeholder="Type a command or search..." class="c-palette__input" autofocus />
+        <span class="c-palette__hint">ESC to close</span>
+      </header>
+      <ul class="c-palette__list">
+        <li><button data-action="goto" data-target="#hero">Go to Hero</button></li>
+        <li><button data-action="goto" data-target="#skills">Go to Skills</button></li>
+        <li><button data-action="goto" data-target="#showcase">Go to Engineering</button></li>
+        <li><button data-action="theme" data-value="light">Switch to Light Mode</button></li>
+        <li><button data-action="theme" data-value="dark">Switch to Dark Mode</button></li>
+      </ul>
+    </div>
+  </dialog>
+
+  <header class="section c-hero" id="hero">
+    <div class="container c-hero__container">
+      <div class="c-hero__content">
+        <h1 class="c-hero__title">AIで“面倒”を自動化する<br>学生エンジニア</h1>
+        <p class="c-hero__desc">生成AI × 実装（Python/Excel）で、<br>作業を仕組みに変えます。</p>
+        <div class="c-hero__badges">
+          <span class="badgex">Automation</span>
+          <span class="badgex">GenAI</span>
+          <span class="badgex">Fast Iteration</span>
         </div>
       </div>
-      <div class="hero-icon">
-        <img src="/icon.jpg" alt="Profile Icon" />
+      <div class="c-hero__visual">
+        <div class="c-avatar-ring">
+          <img src="/assets/avatar.png" alt="Profile Icon" class="c-avatar" />
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- 5-2. Strength -->
-  <section class="section strength">
-    <div class="container">
-      <h2 class="section-title">Strength</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>実装まで落とし込める</h3>
-          <p>AIの提案を、Python/Excelで“使える形”に整えて完了まで持っていきます。</p>
-        </div>
-        <div class="card">
-          <h3>AI活用の幅が広い</h3>
-          <p>文章・要約・企画・画像など、目的に合わせて最適な使い方を選びます。</p>
-        </div>
-        <div class="card">
-          <h3>スピードと機動力</h3>
-          <p>短いサイクルで提案→修正→確定まで進め、基本いつでも対応可能です。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5-3. Capabilities -->
-  <section class="section capabilities">
-    <div class="container">
-      <h2 class="section-title">Capabilities</h2>
-      <div class="capabilities-list">
-        <div class="cap-group">
-          <h3 class="cap-category">業務自動化</h3>
-          <ul class="cap-items">
-            <li>Excelテンプレ（更新手順込み）</li>
-            <li>データ整形ルール</li>
-            <li>自動集計の仕組み</li>
-          </ul>
-        </div>
-        <div class="cap-group">
-          <h3 class="cap-category">生成AI活用</h3>
-          <ul class="cap-items">
-            <li>文章ドラフト</li>
-            <li>要約</li>
-            <li>台本たたき</li>
-            <li>プロンプト整備</li>
-          </ul>
-        </div>
-        <div class="cap-group">
-          <h3 class="cap-category">技術サポート</h3>
-          <ul class="cap-items">
-            <li>エラー原因の切り分け</li>
-            <li>再発防止の手順化</li>
-            <li>改善案の提示</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5-4. Proof (Template) -->
-  <section class="section proof">
-    <div class="container">
-      <h2 class="section-title">Proof</h2>
-      <div class="case-study">
-        <h3 class="case-title">Case 01｜ロゴ制作（短サイクルで要件→提案→修正）</h3>
-        <dl class="case-details">
-          <div class="case-row">
-            <dt>課題</dt>
-            <dd>イメージが曖昧で、方向性が定まらない。</dd>
-          </div>
-          <div class="case-row">
-            <dt>ゴール</dt>
-            <dd>用途に合う“迷わないロゴ”に決める。</dd>
-          </div>
-          <div class="case-row">
-            <dt>アプローチ</dt>
-            <dd>意図を言語化→複数案→比較軸を明確化→短い修正ループ。</dd>
-          </div>
-          <div class="case-row">
-            <dt>成果物</dt>
-            <dd>ロゴデータ一式＋用途別の使い分け案。</dd>
-          </div>
-          <div class="case-row">
-            <dt>効果</dt>
-            <dd>意思決定が早まり、修正回数が減った。</dd>
-          </div>
-          <div class="case-row">
-            <dt>工夫</dt>
-            <dd>要望を“言葉”にして共有し、認識ズレを最小化。</dd>
-          </div>
-          <div class="case-row evaluation">
-            <dt>評価</dt>
-            <dd>「連絡がスムーズで進めやすい」と言っていただいた。</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5-5. Work Style -->
-  <section class="section work-style">
-    <div class="container">
-      <h2 class="section-title">Work Style</h2>
-      <div class="work-style-grid">
-        <div class="style-item">
-          <h3>目的から確認</h3>
-          <p>最初に「何を良くしたいか」を確認し、成果物のゴールを合わせます。</p>
-        </div>
-        <div class="style-item">
-          <h3>短い途中共有</h3>
-          <p>早い段階でたたきを出し、ズレが大きくなる前に修正します。</p>
-        </div>
-        <div class="style-item">
-          <h3>検品前提</h3>
-          <p>AIの出力はそのまま使わず、目的に合う形へ整えて提出します。</p>
-        </div>
-        <div class="style-item">
-          <h3>スピード重視</h3>
-          <p>基本いつでも対応可能で、短納期でも進行しやすい形に組み立てます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5-6. Skills -->
-  <section class="section skills">
+  <!-- Skills (Animated) -->
+  <section class="section c-skills" id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
-      <ul class="skill-list-simple">
-        <li><strong>Python</strong>：自動化・データ処理</li>
-        <li><strong>Excel</strong>：関数設計・テンプレ化</li>
-        <li><strong>生成AI</strong>：文章/要約/企画/画像（用途に応じて運用）</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 5-7. Profile (Black Section) -->
-  <section class="section profile">
-    <div class="container">
-      <h2 class="section-title profile-title">Profile</h2>
-      <div class="profile-content">
-        <p class="profile-short">
-          情報系大学で学びながら、AIの力で“面倒”をどこまで自動化できるかを日々追求・実践しています。技術とAI活用を組み合わせ、最短ルートで課題解決することが得意です。
-        </p>
-        <button id="toggleProfile" class="toggle-btn" aria-expanded="false">
-          もっと読む
-        </button>
-        <div class="profile-full" id="fullProfile" hidden>
-          <p>
-            現在、情報系大学に在籍しながら、実践的な開発案件に取り組んでいます。<br>
-            生成AIの進化は早く、キャッチアップと実践の繰り返しが不可欠です。私は新しいツールを恐れず、検証し、実務にどう活かせるかを常に考えています。<br>
-            クライアント様の「面倒くさい」を、私の技術で「仕組み」に変え、本来注力すべき業務に時間を使っていただくことが私のミッションです。<br>
-            ご連絡はSNSやメールではなく、指定のプラットフォーム経由でお願いいたします。
-          </p>
+      <div class="c-skills__grid">
+        <!-- Card 1: Python -->
+        <div class="c-skill-card" data-p="90">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>Python</h3>
+            <p>Automation</p>
+          </div>
+        </div>
+        <!-- Card 2: Excel -->
+        <div class="c-skill-card" data-p="85">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>Excel</h3>
+            <p>VBA/Formulas</p>
+          </div>
+        </div>
+        <!-- Card 3: Prompting -->
+        <div class="c-skill-card" data-p="95">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>Prompting</h3>
+            <p>GenAI Control</p>
+          </div>
+        </div>
+        <!-- Card 4: Data -->
+        <div class="c-skill-card" data-p="80">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>Data</h3>
+            <p>Cleansing</p>
+          </div>
+        </div>
+        <!-- Card 5: QA -->
+        <div class="c-skill-card" data-p="100">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>QA</h3>
+            <p>Quality Check</p>
+          </div>
+        </div>
+        <!-- Card 6: Comm -->
+        <div class="c-skill-card" data-p="90">
+          <div class="c-skill-ring" style="--p:0"></div>
+          <div class="c-skill-content">
+            <h3>Comm</h3>
+            <p>Speed/Smooth</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- Capabilities -->
+  <section class="section c-capabilities">
     <div class="container">
-      <p>最終更新日：2026-02-04</p>
-      <p class="copyright">本ページは応募提出用の自己紹介として作成しています。</p>
+      <h2 class="section-title">Capabilities</h2>
+      <div class="c-cap-grid">
+        <div class="c-cap-col">
+          <h3>業務自動化</h3>
+          <ul>
+            <li>データ整形・クレンジング</li>
+            <li>自動集計の仕組み構築</li>
+            <li>Excel更新手順のテンプレ化</li>
+          </ul>
+        </div>
+        <div class="c-cap-col">
+          <h3>生成AI活用</h3>
+          <ul>
+            <li>文章ドラフト作成</li>
+            <li>長文要約・論点整理</li>
+            <li>動画台本たたき作成</li>
+            <li>企画アイデアの壁打ち</li>
+          </ul>
+        </div>
+        <div class="c-cap-col">
+          <h3>技術支援</h3>
+          <ul>
+            <li>エラー原因の切り分け</li>
+            <li>再発防止策のドキュメント化</li>
+            <li>AI導入の相談・改善提案</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Showcase -->
+  <section class="section c-showcase" id="showcase">
+    <div class="container">
+      <h2 class="section-title">Engineering Showcase</h2>
+      <p class="u-mb-4">実装力の証明：このページ自体がポートフォリオです。</p>
+
+      <div class="c-demo-grid">
+        <!-- Demo 1: Theme Toggle -->
+        <div class="c-demo-card">
+          <h3>Theme Toggle</h3>
+          <p>CSS Variables & LocalStorage</p>
+          <div class="c-demo-control">
+            <label class="switch">
+              <input type="checkbox" id="themeToggle" />
+              <span class="slider round"></span>
+            </label>
+            <span id="themeLabel">Light</span>
+          </div>
+        </div>
+
+        <!-- Demo 2: Timeline -->
+        <div class="c-demo-card">
+          <h3>Interactive Timeline</h3>
+          <p>IntersectionObserver Scroll Spy</p>
+          <div class="c-timeline">
+            <div class="c-timeline__step" data-step="1">Goal</div>
+            <div class="c-timeline__step" data-step="2">Draft</div>
+            <div class="c-timeline__step" data-step="3">QC</div>
+            <div class="c-timeline__step" data-step="4">Deliver</div>
+          </div>
+        </div>
+
+        <!-- Demo 3: Command Palette -->
+        <div class="c-demo-card">
+          <h3>Command Palette</h3>
+          <p>Dialog API & Keyboard Trap</p>
+          <div class="c-demo-control">
+            <button class="btn-sm" id="openPalette">Press Ctrl+K</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Style -->
+  <section class="section c-workstyle">
+    <div class="container">
+      <h2 class="section-title">Work Style</h2>
+      <div class="c-work-grid">
+        <div class="c-work-card">
+          <h3>目的合わせ</h3>
+          <p>最初にゴールを明確化</p>
+        </div>
+        <div class="c-work-card">
+          <h3>途中共有</h3>
+          <p>ズレを防ぐ早期確認</p>
+        </div>
+        <div class="c-work-card">
+          <h3>検品前提</h3>
+          <p>AI出力は必ずチェック</p>
+        </div>
+        <div class="c-work-card">
+          <h3>スピード重視</h3>
+          <p>基本いつでも対応可能</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile (Dark) -->
+  <section class="section c-profile">
+    <div class="container">
+      <div class="c-profile__content">
+        <img src="/assets/avatar.png" alt="User" class="c-profile__icon" />
+        <p class="c-profile__short">
+          情報系大学で学びながら、AIの力で“面倒”をどこまで自動化できるかを日々追求・実践しています。<br>
+          技術とAI活用を組み合わせ、最短ルートで課題解決することが得意です。
+        </p>
+        <details class="c-profile__details">
+          <summary class="btn-outline">もっと詳しく</summary>
+          <div class="c-profile__full">
+            <p>
+              現在、情報系大学に在籍しながら、実践的な開発案件に取り組んでいます。<br>
+              生成AIの進化は早く、キャッチアップと実践の繰り返しが不可欠です。私は新しいツールを恐れず、検証し、実務にどう活かせるかを常に考えています。<br>
+              クライアント様の「面倒くさい」を、私の技術で「仕組み」に変え、本来注力すべき業務に時間を使っていただくことが私のミッションです。<br>
+              ご連絡はSNSやメールではなく、指定のプラットフォーム経由でお願いいたします。
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="c-footer">
+    <div class="container">
+      <div class="c-footer__meta">
+        <span>Built with HTML/CSS/JS</span>
+        <span>A11y: Keyboard / Reduced Motion</span>
+        <span>Performance: lazy / content-visibility</span>
+      </div>
     </div>
   </footer>
-  <script type="module" src="/main.js"></script>
+
+  <script type="module" src="/app.js"></script>
 </body>
 
 </html>
